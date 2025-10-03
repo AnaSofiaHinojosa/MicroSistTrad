@@ -73,7 +73,7 @@ def optimize(trial, train_data) -> float:
     n_splits = 5
     calmars = []
     len_data = len(data)
-
+    data = get_signals(data, # trial.suggest params )
     for i in range(n_splits):
         size = len_data//n_splits
         start_idx = i * size
